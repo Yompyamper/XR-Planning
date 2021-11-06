@@ -1,0 +1,25 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://main.gd" type="Script" id=1]
+
+[sub_resource type="PlaneMesh" id=1]
+
+[node name="Main" type="Spatial"]
+script = ExtResource( 1 )
+
+[node name="World" type="Spatial" parent="."]
+
+[node name="Floor" type="MeshInstance" parent="World"]
+transform = Transform( 3, 0, 0, 0, 1, 0, 0, 0, 3, 0, 0, 0 )
+mesh = SubResource( 1 )
+material/0 = null
+
+[node name="ARVROrigin" type="ARVROrigin" parent="."]
+
+[node name="Player_Camera" type="ARVRCamera" parent="ARVROrigin"]
+current = true
+
+[node name="Left_Controller" type="ARVRController" parent="ARVROrigin"]
+
+[node name="Right_Controller" type="ARVRController" parent="ARVROrigin"]
+controller_id = 2
