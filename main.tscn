@@ -3,3 +3,13 @@
 [node name="Main" type="Spatial"]
 
 [node name="World" type="Spatial" parent="."]
+
+[node name="ARVROrigin" type="ARVROrigin" parent="."]
+
+[node name="Player_Camera" type="ARVRCamera" parent="ARVROrigin"]
+current = true
+
+[node name="Left_Controller" type="ARVRController" parent="ARVROrigin"]
+
+[node name="Right_Controller" type="ARVRController" parent="ARVROrigin"]
+controller_id = 2
